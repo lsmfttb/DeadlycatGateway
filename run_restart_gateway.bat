@@ -21,6 +21,6 @@ for /f "tokens=5" %%p in ('netstat -ano ^| find ":%PORT% " ^| find "LISTENING"')
 )
 
 rem === 启动服务（无窗口后台运行）===
-start "" /b python "%PYFILE%"
+start "" "%VENV_BIN%\pythonw.exe" "%PYFILE%"
 echo [OK] smart_search_gateway 已启动/重启
 exit /b 0
